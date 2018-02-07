@@ -22,6 +22,7 @@ $(".available").on("click", function (event){
   });
 
   $("#x").click(function(){
+    $("form").fadeOut("slow");
     $('form').addClass("hidden");
   });
 
