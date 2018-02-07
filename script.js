@@ -4,9 +4,11 @@ var thisTable;
 
 $(".available").on("click", function (event){
     thisTable = $(this);
+    $("form").fadeIn("slow");
     $("form").removeClass("hidden");
     var tableNumber = $(this).text();
     $("h3 > span").text(tableNumber);
+
 
 });
 
@@ -14,6 +16,7 @@ $(".available").on("click", function (event){
     event.preventDefault();
     thisTable.addClass("reserved");
     addTableData();
+    $("form").fadeOut("slow");
     $('form').addClass("hidden");
     $('form')[0].reset();
   });
